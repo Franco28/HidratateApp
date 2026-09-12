@@ -15,4 +15,5 @@
     <color name="border">#E1EAF5</color>
     <color name="divider">#EDF2F8</color>
     <color name="transparent">#00000000</color>
+    <color name="ic_launcher_background">#0D7FF5</color>
 </resources>
