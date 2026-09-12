@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText etCustomAmount;
     private LinearLayout historyContainer;
 
+    private static final int GOAL_WATER = 2000;
+
     private int currentWater = 0;
     private final List<WaterRecord> recordList = new ArrayList<>();
 
@@ -119,12 +121,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addWater(int amount) {
+        int previousWater = currentWater;
         currentWater += amount;
         String timeStr = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
         WaterRecord record = new WaterRecord(amount, timeStr);
         recordList.add(0, record);
 
         playWaterPourSound();
+
+        if (previousWater < GOAL_WATER && currentWater >= GOAL_WATER) {
+            Toast.makeText(this, R.string.goal_reached, Toast.LENGTH_LONG).show();
+        }
 
         updateUI();
         rebuildHistoryViews();
@@ -165,11 +172,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateUI() {
-        int goalWater = 2000;
         tvCurrentWater.setText(getString(R.string.water_amount, String.valueOf(currentWater)));
-        tvGoal.setText(getString(R.string.goal_amount, String.valueOf(goalWater)));
+        tvGoal.setText(getString(R.string.goal_amount, String.valueOf(GOAL_WATER)));
 
-        int percentage = (int) Math.round(((double) currentWater / goalWater) * 100);
+        int percentage = (int) Math.round(((double) currentWater / GOAL_WATER) * 100);
         tvPercentage.setText(getString(R.string.percentage, percentage));
 
         circularProgress.setProgress(percentage);

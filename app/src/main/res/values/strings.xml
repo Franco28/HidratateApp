@@ -30,6 +30,7 @@
     <string name="error_invalid_amount">Ingresá una cantidad válida mayor a 0.</string>
     <string name="error_amount_too_large">La cantidad máxima por registro es 5.000 ml.</string>
     <string name="record_deleted">Registro eliminado.</string>
+    <string name="goal_reached">Felicitaciones! Has cumplido tu objetivo diario de agua.</string>
     <string name="settings_future">Configuración disponible en una próxima pantalla.</string>
     <string name="coming_soon">Próximamente</string>
 </resources>
