@@ -1,6 +1,8 @@
 package com.lms.hidratateapp;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -58,11 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tvDate = findViewById(R.id.tvDate);
         SimpleDateFormat sdfDate = new SimpleDateFormat("EEEE, d 'de' MMMM", Locale.forLanguageTag("es-AR"));
-        String formattedDate = sdfDate.format(new Date());
-        if (!formattedDate.isEmpty()) {
-            formattedDate = formattedDate.substring(0, 1).toUpperCase(Locale.forLanguageTag("es-AR")) + formattedDate.substring(1);
-        }
-        tvDate.setText(formattedDate);
+        String rawDate = sdfDate.format(new Date());
+        String finalDate = rawDate.isEmpty() ? "" : rawDate.substring(0, 1).toUpperCase(Locale.forLanguageTag("es-AR")) + rawDate.substring(1);
+        tvDate.setText(finalDate);
 
         circularProgress = findViewById(R.id.circularProgress);
         tvCurrentWater = findViewById(R.id.tvCurrentWater);
@@ -124,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
         WaterRecord record = new WaterRecord(amount, timeStr);
         recordList.add(0, record);
 
+        playWaterPourSound();
+
         updateUI();
         rebuildHistoryViews();
     }
@@ -131,9 +133,34 @@ public class MainActivity extends AppCompatActivity {
     private void removeRecord(WaterRecord record) {
         if (recordList.remove(record)) {
             currentWater = Math.max(0, currentWater - record.amount);
+            playWaterEraseSound();
             updateUI();
             rebuildHistoryViews();
             Toast.makeText(this, R.string.record_deleted, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void playWaterPourSound() {
+        try {
+            MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.water_pour);
+            if (mediaPlayer != null) {
+                mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+                mediaPlayer.start();
+            }
+        } catch (Exception e) {
+            Log.e("MainActivity", "Error al reproducir el sonido water_pour", e);
+        }
+    }
+
+    private void playWaterEraseSound() {
+        try {
+            MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.water_erase);
+            if (mediaPlayer != null) {
+                mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+                mediaPlayer.start();
+            }
+        } catch (Exception e) {
+            Log.e("MainActivity", "Error al reproducir el sonido water_erase", e);
         }
     }
 
