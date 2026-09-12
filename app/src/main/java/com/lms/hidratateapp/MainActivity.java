@@ -64,6 +64,50 @@ public class MainActivity extends AppCompatActivity {
         etCustomAmount = findViewById(R.id.etCustomAmount);
         historyContainer = findViewById(R.id.historyContainer);
 
+        Button btn250 = findViewById(R.id.btn250);
+        Button btn500 = findViewById(R.id.btn500);
+        Button btn750 = findViewById(R.id.btn750);
+        btn250.setOnClickListener(v -> addWater(250));
+        btn500.setOnClickListener(v -> addWater(500));
+        btn750.setOnClickListener(v -> addWater(750));
+
+
         updateUI();
+    }
+
+    private void addWater(int amount) {
+        currentWater += amount;
+        updateUI();
+    }
+
+    private void updateUI() {
+        int goalWater = 2000;
+
+        tvCurrentWater.setText(
+                getString(
+                        R.string.water_amount,
+                        String.valueOf(currentWater)
+                )
+        );
+
+        tvGoal.setText(
+                getString(
+                        R.string.goal_amount,
+                        String.valueOf(goalWater)
+                )
+        );
+
+        int percentage = (int) Math.round(
+                ((double) currentWater / goalWater) * 100
+        );
+
+        tvPercentage.setText(
+                getString(
+                        R.string.percentage,
+                        percentage
+                )
+        );
+
+        circularProgress.setProgress(percentage);
     }
 }
