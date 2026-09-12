@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">¡Hidratate!</string>
     <string name="app_subtitle">Pequeños hábitos, grandes cambios</string>
 
     <string name="today">Hoy</string>
-    <string name="daily_consumption">Consumo de hoy</string>
+    <string name="settings">Configuración</string>
 
     <string name="add_water">Agregar agua</string>
-
     <string name="add_250">+250 ml</string>
     <string name="add_500">+500 ml</string>
     <string name="add_750">+750 ml</string>
-
-    <string name="custom_amount_hint">Cantidad en ml</string>
     <string name="add">Agregar</string>
+    <string name="custom_amount_hint">Cantidad en ml</string>
 
     <string name="history_today">Registro de hoy</string>
 
-    <string name="goal_default">Meta diaria: 2.500 ml</string>
-
     <string name="drop_content_description">Gota de agua</string>
     <string name="glass_content_description">Vaso de agua</string>
+    <string name="calendar_content_description">Fecha actual</string>
+    <string name="delete_content_description">Eliminar registro</string>
+    <string name="home_content_description">Inicio</string>
+    <string name="settings_content_description">Configuración</string>
 
+    <string name="water_amount">%1$s ml</string>
+    <string name="goal_amount">de %1$s ml</string>
+    <string name="percentage">%1$d%%</string>
+
+    <string name="error_empty_amount">Ingresá una cantidad.</string>
+    <string name="error_invalid_amount">Ingresá una cantidad válida mayor a 0.</string>
+    <string name="error_amount_too_large">La cantidad máxima por registro es 5.000 ml.</string>
+    <string name="record_deleted">Registro eliminado.</string>
+    <string name="settings_future">Configuración disponible en una próxima pantalla.</string>
 </resources>
