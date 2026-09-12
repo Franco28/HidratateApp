@@ -6,22 +6,22 @@
     android:background="@drawable/bg_history_row"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:paddingStart="12dp"
-    android:paddingEnd="12dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
-    android:layout_marginBottom="6dp">
+    android:paddingStart="@dimen/spacing_md"
+    android:paddingEnd="@dimen/spacing_md"
+    android:paddingTop="@dimen/spacing_10"
+    android:paddingBottom="@dimen/spacing_10"
+    android:layout_marginBottom="@dimen/spacing_alt_sm">
 
     <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/icon_size_md"
+        android:layout_height="@dimen/icon_size_md"
         android:contentDescription="@string/glass_content_description"
         android:src="@drawable/ic_glass" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="@dimen/spacing_md"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -30,25 +30,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/text_primary"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_body"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvRecordTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="@dimen/spacing_2xs"
             android:textColor="@color/text_secondary"
-            android:textSize="12sp" />
+            android:textSize="@dimen/text_small" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/btnDeleteRecord"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="@dimen/icon_size_delete"
+        android:layout_height="@dimen/icon_size_delete"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/delete_content_description"
-        android:padding="6dp"
+        android:padding="@dimen/spacing_alt_sm"
         android:src="@drawable/ic_trash" />
 
 </LinearLayout>

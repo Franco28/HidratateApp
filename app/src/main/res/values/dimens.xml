@@ -2,22 +2,45 @@
 <resources>
     <dimen name="screen_padding">18dp</dimen>
 
+    <!-- Spacing -->
+    <dimen name="spacing_2xs">2dp</dimen>
     <dimen name="spacing_xs">4dp</dimen>
     <dimen name="spacing_sm">8dp</dimen>
     <dimen name="spacing_md">12dp</dimen>
     <dimen name="spacing_lg">16dp</dimen>
     <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_alt_sm">6dp</dimen>
+    <dimen name="spacing_10">10dp</dimen>
+    <dimen name="spacing_14">14dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_22">22dp</dimen>
 
+    <!-- Radius -->
     <dimen name="radius_sm">12dp</dimen>
     <dimen name="radius_md">16dp</dimen>
     <dimen name="radius_lg">20dp</dimen>
 
+    <!-- Component Sizes & Heights -->
     <dimen name="button_height">48dp</dimen>
-    <dimen name="quick_button_height">88dp</dimen>
+    <dimen name="quick_button_height">82dp</dimen>
+    <dimen name="header_image_size">50dp</dimen>
+    <dimen name="date_pill_height">50dp</dimen>
+    <dimen name="progress_container_size">246dp</dimen>
+    <dimen name="progress_view_size">216dp</dimen>
+    <dimen name="drop_icon_size">38dp</dimen>
+    <dimen name="nav_bar_height">80dp</dimen>
 
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_sm">22dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_delete">36dp</dimen>
+
+    <!-- Text Sizes -->
     <dimen name="text_title">29sp</dimen>
     <dimen name="text_section">20sp</dimen>
+    <dimen name="text_subheading">18sp</dimen>
     <dimen name="text_body">14sp</dimen>
+    <dimen name="text_caption">13sp</dimen>
     <dimen name="text_small">12sp</dimen>
     <dimen name="text_metric">29sp</dimen>
 </resources>

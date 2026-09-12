@@ -25,9 +25,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="@dimen/screen_padding"
-            android:paddingTop="16dp"
+            android:paddingTop="@dimen/spacing_lg"
             android:paddingEnd="@dimen/screen_padding"
-            android:paddingBottom="24dp">
+            android:paddingBottom="@dimen/spacing_xl">
 
             <!-- HEADER -->
             <LinearLayout
@@ -38,15 +38,15 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/header_image_size"
+                    android:layout_height="@dimen/header_image_size"
                     android:contentDescription="@string/drop_content_description"
                     android:src="@drawable/ic_drop" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
+                    android:layout_marginStart="@dimen/spacing_14"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -62,29 +62,29 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="@dimen/spacing_2xs"
                         android:includeFontPadding="false"
                         android:text="@string/app_subtitle"
                         android:textColor="@color/text_secondary"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/text_caption" />
                 </LinearLayout>
             </LinearLayout>
 
             <!-- FECHA -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="@dimen/date_pill_height"
+                android:layout_marginTop="@dimen/spacing_lg"
                 android:background="@drawable/bg_date_pill"
                 android:baselineAligned="false"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp">
+                android:paddingStart="@dimen/screen_padding"
+                android:paddingEnd="@dimen/screen_padding">
 
                 <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
+                    android:layout_width="@dimen/icon_size_sm"
+                    android:layout_height="@dimen/icon_size_sm"
                     android:contentDescription="@string/calendar_content_description"
                     android:src="@drawable/ic_calendar" />
 
@@ -92,23 +92,23 @@
                     android:id="@+id/tvDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/spacing_sm"
                     android:textColor="@color/text_primary"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/text_body"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <!-- PROGRESO CIRCULAR -->
             <FrameLayout
-                android:layout_width="246dp"
-                android:layout_height="246dp"
+                android:layout_width="@dimen/progress_container_size"
+                android:layout_height="@dimen/progress_container_size"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="@dimen/spacing_lg">
 
                 <com.lms.hidratateapp.CircularProgressView
                     android:id="@+id/circularProgress"
-                    android:layout_width="216dp"
-                    android:layout_height="216dp"
+                    android:layout_width="@dimen/progress_view_size"
+                    android:layout_height="@dimen/progress_view_size"
                     android:layout_gravity="center" />
 
                 <LinearLayout
@@ -119,8 +119,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
+                        android:layout_width="@dimen/drop_icon_size"
+                        android:layout_height="@dimen/drop_icon_size"
                         android:contentDescription="@string/drop_content_description"
                         android:src="@drawable/ic_drop" />
 
@@ -128,7 +128,7 @@
                         android:id="@+id/tvCurrentWater"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
+                        android:layout_marginTop="@dimen/spacing_alt_sm"
                         android:includeFontPadding="false"
                         android:textColor="@color/text_primary"
                         android:textSize="@dimen/text_metric"
@@ -138,19 +138,19 @@
                         android:id="@+id/tvGoal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="@dimen/spacing_2xs"
                         android:includeFontPadding="false"
                         android:textColor="@color/text_secondary"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/text_caption" />
 
                     <TextView
                         android:id="@+id/tvPercentage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
+                        android:layout_marginTop="@dimen/spacing_alt_sm"
                         android:includeFontPadding="false"
                         android:textColor="@color/text_primary"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/text_subheading"
                         android:textStyle="bold" />
                 </LinearLayout>
             </FrameLayout>
@@ -159,7 +159,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="@dimen/screen_padding"
                 android:text="@string/add_water"
                 android:textColor="@color/text_primary"
                 android:textSize="@dimen/text_section"
@@ -168,19 +168,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/spacing_10"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn250"
                     android:layout_width="0dp"
-                    android:layout_height="82dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_height="@dimen/quick_button_height"
+                    android:layout_marginEnd="@dimen/spacing_10"
                     android:layout_weight="1"
                     android:background="@drawable/bg_quick_primary"
                     android:drawableTop="@drawable/ic_glass_white"
-                    android:drawablePadding="6dp"
+                    android:drawablePadding="@dimen/spacing_alt_sm"
                     android:gravity="center"
                     android:minHeight="0dp"
                     android:minWidth="0dp"
@@ -189,18 +189,18 @@
                     android:text="@string/add_250"
                     android:textAllCaps="false"
                     android:textColor="@color/surface"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/text_caption"
                     tools:ignore="ButtonStyle" />
 
                 <Button
                     android:id="@+id/btn500"
                     android:layout_width="0dp"
-                    android:layout_height="82dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_height="@dimen/quick_button_height"
+                    android:layout_marginEnd="@dimen/spacing_10"
                     android:layout_weight="1"
                     android:background="@drawable/bg_quick_secondary"
                     android:drawableTop="@drawable/ic_glass"
-                    android:drawablePadding="6dp"
+                    android:drawablePadding="@dimen/spacing_alt_sm"
                     android:gravity="center"
                     android:minHeight="0dp"
                     android:minWidth="0dp"
@@ -209,17 +209,17 @@
                     android:text="@string/add_500"
                     android:textAllCaps="false"
                     android:textColor="@color/text_primary"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/text_caption"
                     tools:ignore="ButtonStyle" />
 
                 <Button
                     android:id="@+id/btn750"
                     android:layout_width="0dp"
-                    android:layout_height="82dp"
+                    android:layout_height="@dimen/quick_button_height"
                     android:layout_weight="1"
                     android:background="@drawable/bg_quick_secondary"
                     android:drawableTop="@drawable/ic_glass"
-                    android:drawablePadding="6dp"
+                    android:drawablePadding="@dimen/spacing_alt_sm"
                     android:gravity="center"
                     android:minHeight="0dp"
                     android:minWidth="0dp"
@@ -228,7 +228,7 @@
                     android:text="@string/add_750"
                     android:textAllCaps="false"
                     android:textColor="@color/text_primary"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/text_caption"
                     tools:ignore="ButtonStyle" />
             </LinearLayout>
 
@@ -236,20 +236,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/spacing_10"
                 android:baselineAligned="false"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
                     android:background="@drawable/bg_input_icon_box"
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/icon_size_sm"
+                        android:layout_height="@dimen/icon_size_md"
                         android:contentDescription="@string/glass_content_description"
                         android:src="@drawable/ic_glass" />
                 </LinearLayout>
@@ -257,8 +257,8 @@
                 <EditText
                     android:id="@+id/etCustomAmount"
                     android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginStart="@dimen/spacing_10"
                     android:layout_weight="1"
                     android:autofillHints="none"
                     android:background="@drawable/bg_input_box"
@@ -268,17 +268,17 @@
                     android:inputType="number"
                     android:maxLength="4"
                     android:maxLines="1"
-                    android:paddingStart="14dp"
-                    android:paddingEnd="14dp"
+                    android:paddingStart="@dimen/spacing_14"
+                    android:paddingEnd="@dimen/spacing_14"
                     android:textColor="@color/text_primary"
                     android:textColorHint="@color/text_secondary"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/text_body" />
 
                 <Button
                     android:id="@+id/btnAdd"
                     android:layout_width="100dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginStart="@dimen/spacing_10"
                     android:background="@drawable/bg_quick_primary"
                     android:minHeight="0dp"
                     android:minWidth="0dp"
@@ -286,14 +286,14 @@
                     android:text="@string/add"
                     android:textAllCaps="false"
                     android:textColor="@color/surface"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/text_body" />
             </LinearLayout>
 
             <!-- HISTORIAL -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/spacing_20"
                 android:text="@string/history_today"
                 android:textColor="@color/text_primary"
                 android:textSize="@dimen/text_section"
@@ -303,13 +303,13 @@
                 android:id="@+id/historyCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/spacing_10"
                 android:background="@drawable/bg_surface_card"
                 android:orientation="vertical"
-                android:paddingStart="8dp"
-                android:paddingTop="6dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="6dp">
+                android:paddingStart="@dimen/spacing_sm"
+                android:paddingTop="@dimen/spacing_alt_sm"
+                android:paddingEnd="@dimen/spacing_sm"
+                android:paddingBottom="@dimen/spacing_alt_sm">
 
                 <LinearLayout
                     android:id="@+id/historyContainer"
@@ -325,13 +325,13 @@
     <LinearLayout
         android:id="@+id/navBar"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/nav_bar_height"
         android:background="@drawable/bg_nav_bar"
         android:baselineAligned="false"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingStart="22dp"
-        android:paddingEnd="22dp"
+        android:paddingStart="@dimen/spacing_22"
+        android:paddingEnd="@dimen/spacing_22"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -342,13 +342,13 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            android:drawablePadding="6dp"
+            android:drawablePadding="@dimen/spacing_alt_sm"
             android:focusable="true"
             android:gravity="center"
             android:paddingTop="20dp"
             android:text="@string/today"
             android:textColor="@color/blue_primary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_caption"
             android:textStyle="bold"
             app:drawableTopCompat="@drawable/ic_home" />
 
@@ -358,13 +358,13 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            android:drawablePadding="6dp"
+            android:drawablePadding="@dimen/spacing_alt_sm"
             android:focusable="true"
             android:gravity="center"
             android:paddingTop="20dp"
             android:text="@string/settings"
             android:textColor="@color/text_secondary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_caption"
             app:drawableTopCompat="@drawable/ic_settings" />
 
     </LinearLayout>
