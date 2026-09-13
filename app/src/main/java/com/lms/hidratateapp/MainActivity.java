@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvPercentage;
     private EditText etCustomAmount;
     private LinearLayout historyContainer;
+    private TextView tvEmptyHistory;
 
     private static final int GOAL_WATER = 2000;
 
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         tvPercentage = findViewById(R.id.tvPercentage);
         etCustomAmount = findViewById(R.id.etCustomAmount);
         historyContainer = findViewById(R.id.historyContainer);
+        tvEmptyHistory = findViewById(R.id.tvEmptyHistory);
 
         Button btn250 = findViewById(R.id.btn250);
         Button btn500 = findViewById(R.id.btn500);
@@ -185,18 +187,23 @@ public class MainActivity extends AppCompatActivity {
         historyContainer.removeAllViews();
         LayoutInflater inflater = LayoutInflater.from(this);
 
-        for (WaterRecord record : recordList) {
-            View rowView = inflater.inflate(R.layout.item_history, historyContainer, false);
-            TextView tvRecordAmount = rowView.findViewById(R.id.tvRecordAmount);
-            TextView tvRecordTime = rowView.findViewById(R.id.tvRecordTime);
-            ImageView btnDeleteRecord = rowView.findViewById(R.id.btnDeleteRecord);
+        if (recordList.isEmpty()) {
+            tvEmptyHistory.setVisibility(View.VISIBLE);
+        } else {
+            tvEmptyHistory.setVisibility(View.GONE);
+            for (WaterRecord record : recordList) {
+                View rowView = inflater.inflate(R.layout.item_history, historyContainer, false);
+                TextView tvRecordAmount = rowView.findViewById(R.id.tvRecordAmount);
+                TextView tvRecordTime = rowView.findViewById(R.id.tvRecordTime);
+                ImageView btnDeleteRecord = rowView.findViewById(R.id.btnDeleteRecord);
 
-            tvRecordAmount.setText(getString(R.string.water_amount, String.valueOf(record.amount)));
-            tvRecordTime.setText(record.time);
+                tvRecordAmount.setText(getString(R.string.water_amount, String.valueOf(record.amount)));
+                tvRecordTime.setText(record.time);
 
-            btnDeleteRecord.setOnClickListener(v -> removeRecord(record));
+                btnDeleteRecord.setOnClickListener(v -> removeRecord(record));
 
-            historyContainer.addView(rowView);
+                historyContainer.addView(rowView);
+            }
         }
     }
 }

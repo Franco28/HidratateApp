@@ -311,6 +311,17 @@
                 android:paddingEnd="@dimen/spacing_sm"
                 android:paddingBottom="@dimen/spacing_alt_sm">
 
+                <TextView
+                    android:id="@+id/tvEmptyHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/spacing_lg"
+                    android:paddingBottom="@dimen/spacing_lg"
+                    android:text="@string/no_records"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_body" />
+
                 <LinearLayout
                     android:id="@+id/historyContainer"
                     android:layout_width="match_parent"
