@@ -4,14 +4,34 @@
     android:height="26dp"
     android:viewportWidth="24"
     android:viewportHeight="26">
+
+    <!-- Liquid fill inside the glass -->
+    <path
+        android:fillColor="@color/blue_soft"
+        android:pathData="M6.2,8L7.3,22.3C7.4,23.5 8.3,24.4 9.5,24.4H14.5C15.7,24.4 16.6,23.5 16.7,22.3L17.8,8H6.2Z" />
+
+    <!-- Glass Outer Outline -->
     <path
         android:fillColor="@color/transparent"
         android:strokeColor="@color/blue_primary"
         android:strokeWidth="2"
-        android:pathData="M5,1H19L17,24H7L5,1Z" />
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M4.5,4H19.5L17.4,22.6C17.2,24 16.1,25 14.7,25H9.3C7.9,25 6.8,24 6.6,22.6L4.5,4Z" />
+
+    <!-- Glass Rim -->
     <path
         android:fillColor="@color/transparent"
         android:strokeColor="@color/blue_primary"
-        android:strokeWidth="1.6"
-        android:pathData="M7,7H17" />
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M3.5,4H20.5" />
+
+    <!-- Water Surface Line -->
+    <path
+        android:fillColor="@color/transparent"
+        android:strokeColor="@color/blue_primary"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M6.5,12C9,11 11.5,13 14,12C15.2,11.5 16.5,12.5 17.5,12" />
 </vector>
